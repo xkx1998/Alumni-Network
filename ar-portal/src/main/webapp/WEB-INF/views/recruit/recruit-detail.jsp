@@ -218,7 +218,7 @@
                                         <c:forEach items="${postRecords}" var="record">
                                             <li class="media"><a href="${pageContext.request.contextPath}/ta/show.action?userId=${record.userId}"
                                                                  class="pull-left">
-                                                <img src="${record.portrait}" class="media-object">
+                                                <img src="${pageContext.request.contextPath}${record.portrait}" class="media-object">
                                             </a>
                                                 <div class="media-body">
                                                     <h4>${record.trueName}</h4>

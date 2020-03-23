@@ -73,11 +73,11 @@
 							</c:if>
 						</c:forEach>
 					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">最新照片：</h4>
-						</div>
-					</div>
+<%--					<div class="panel panel-default">--%>
+<%--						<div class="panel-heading">--%>
+<%--							<h4 class="panel-title">最新照片：</h4>--%>
+<%--						</div>--%>
+<%--					</div>--%>
 				</div>
 				<div class="col-md-3"
 					style="background-color: #eee; padding: 10px 10px 50px 10px;">
@@ -97,7 +97,7 @@
 							<span class="glyphicon glyphicon-plus"></span>&nbsp;申请加入</a>
 					</ar:notexist>
 					<hr />
-					<h5 class="subtitle mb5">管理员：</h5>
+<%--					<h5 class="subtitle mb5">管理员：</h5>--%>
 					<div class="media">
 						<a class="pull-left"
 							href="${pageContext.request.contextPath}/ta/show.action?userId=${classroom.mgrId}"> <img

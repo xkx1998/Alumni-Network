@@ -70,7 +70,7 @@
                 </ol>
                 <div class="media">
                     <a class="pull-left" href="${pageContext.request.contextPath}/ta/show.action?userId=${post.userId}">
-                        <img class="thumbnail img-responsive center-block" src="${post.portrait}"
+                        <img class="thumbnail img-responsive center-block" src="${pageContext.request.contextPath}${post.portrait}"
                              style="max-width: 65px"/>
                     </a>
                     <div class="media-body event-body">

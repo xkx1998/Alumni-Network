@@ -36,15 +36,12 @@
 								<div class="media">
 									<a href="${pageContext.request.contextPath}/ta/show.action?userId=${directory.userId}"
 										class="pull-left"> <img alt=""
-										src="${directory.portrait}" class="thumbnail media-object">
+										src="${pageContext.request.contextPath}${directory.portrait}" class="thumbnail media-object">
 									</a>
 									<div class="media-body">
 										<h4 class="person-name">${directory.trueName}</h4>
 										<div class="text-muted">
 											<i class="fa fa-map-marker"></i> ${directory.address}
-										</div>
-										<div class="text-muted">
-											<i class="fa fa-briefcase"></i> 软件工程师 就职于<a href="javascript:;">上海证券交易所</a>
 										</div>
 										<ul class="social-list">
 											<c:if test="${directory.phone!=null}">

@@ -1,14 +1,6 @@
-/**
- * @Title: ClassRoomController.java
- * @Package com.xzit.ar.portal.controller.origin
- * @Description: TODO
- * @author Mr.Black
- * @date 2016年2月20日 下午3:05:30
- * @version V1.0
- */
 package com.xzit.ar.portal.controller.classes;
 
-import java.io.File;
+
 import java.util.*;
 
 import javax.annotation.Resource;
@@ -89,7 +81,7 @@ public class ClassRoomController extends BaseController {
         Page<Map<String, Object>> page = new Page<>(getPageIndex(), 3);
         model.addAttribute("lastInfos", classRoomService.classInfo(page, classId).getBeanList());
         model.addAttribute("memberList", classRoomService.getAllMemberIds(classId));
-
+ 
         return "class/classroom/classroom-index";
     }
 

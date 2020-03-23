@@ -25,19 +25,16 @@
             <div class="col-sm-9">
                 <%@include file="/WEB-INF/views/org/org-tab.jsp" %>
                 <div id="bloglist" class="row" style="position: relative;">
-                    <c:forEach items="${gradeList}" var="grade">
+                    <c:forEach items="${masses}" var="mass">
                         <div class="col-sm-3">
                             <div class="blog-item">
                                 <div class="blog-details">
-                                    <h4 class="blog-title">
-                                        <a href="${pageContext.request.contextPath}/class/queryClasses.action?selectStr=${grade.gradeValue}">${grade.gradeValue}级</a>
-                                    </h4>
+                                    <h5 class="blog-title">
+                                        <a href="${pageContext.request.contextPath}/orgroom.action?originId=${mass.originId}"><i class="fa fa-institution"></i> <ar:sub length="10" value="${mass.originName}" /></a>
+                                    </h5>
                                     <ul class="blog-meta">
-                                        <li>创建于:<fmt:formatDate value="${grade.createTime}"
-                                                                pattern="yyyy-MM-dd"></fmt:formatDate></li>
-                                        <li>
-                                            <a href="${pageContext.request.contextPath}/class/queryClasses.action?selectStr=${grade.gradeValue}">${grade.classNum}个班级</a>
-                                        </li>
+                                        <li>最近活动：<fmt:formatDate value="${mass.stateTime}" pattern="YYYY-MM-dd"></fmt:formatDate></li>
+                                        <li>成员：<a href="${pageContext.request.contextPath}/orgroom/members.action?originId=${mass.originId}">${mass.members}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -45,7 +42,9 @@
                     </c:forEach>
                 </div>
             </div>
-            <div class="col-sm-3" id="org-outline"></div>
+            <div class="col-sm-3" id="org-outline">
+                <img src="${pageContext.request.contextPath}/assets/images/icon/loading/loader.gif" class="center-block">
+            </div>
         </div>
     </section>
 </div>

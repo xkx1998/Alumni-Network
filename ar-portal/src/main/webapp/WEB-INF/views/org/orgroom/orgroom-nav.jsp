@@ -13,7 +13,7 @@
 		<i class="fa fa-users"></i>&nbsp;<strong>成员</strong></a></li>
 	<li id="directory-li"><a href="${pageContext.request.contextPath}/orgroom/directory.action?originId=${orgroom.originId}">
 		<i class="fa  fa-phone-square"></i>&nbsp;<strong>通讯录</strong></a></li>
-	<li id="album-li"><a href="${pageContext.request.contextPath}/orgroom/album.action?originId=${orgroom.originId}"><i class="fa fa-picture-o"></i>&nbsp;<strong>相册</strong></a></li>
+<%--	<li id="album-li"><a href="${pageContext.request.contextPath}/orgroom/album.action?originId=${orgroom.originId}"><i class="fa fa-picture-o"></i>&nbsp;<strong>相册</strong></a></li>--%>
 	<li id="dropdown-li" class="dropdown"><a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-gear"></i>&nbsp;管理 <span class="caret"></span> </a>
 		<ul role="menu" class="dropdown-menu pull-right">
 			<%--<li><a href="orgroom/description.action?originId=${orgroom.originId}">组织简介</a></li>--%>
