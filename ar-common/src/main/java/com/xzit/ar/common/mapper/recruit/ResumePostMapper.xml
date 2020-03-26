@@ -37,24 +37,12 @@
 	</select>
 
     <select id="getPostByUserId" resultType="map">
-		SELECT
-			resume.resume_id resumeId,
-            resume.resume_title resumeTitle,
-            recruit.recruit_id recruitId,
-            recruit.title recruitTitle,
-            post.create_time createTime
-		FROM
-			user_resume resume,
-			recruit recruit,
-            resume_post post
-		WHERE
-		    recruit.recruit_id=post.recruit_id
-		    AND post.resume_id=resume.resume_id
-		    AND resume.user_id=#{userId}
-		    AND post.state='A'
-        ORDER BY
-            post.create_time DESC 
-
+		SELECT ur.resume_id resumeId, ur.resume_title resumeTitle, r.recruit_id recruitId, r.title recruitTitle, rp.create_time createTime
+        FROM user_resume ur
+        LEFT JOIN resume_post rp ON ur.resume_id = rp.resume_id
+        LEFT JOIN recruit r ON rp.recruit_id = r.recruit_id
+        WHERE ur.user_id = #{userId} AND rp.state = 'A'
+        ORDER BY rp.create_time DESC
 	</select>
 
     <delete id="deletePost" parameterType="java.lang.Integer">

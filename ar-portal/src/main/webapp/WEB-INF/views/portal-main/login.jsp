@@ -5,7 +5,7 @@
 <head>
 <title>莞工校友网登录</title>
 	<style>
-		.demo{
+		.bg{
 			position:fixed;
 			top: 0;
 			left: 0;
@@ -14,7 +14,7 @@
 			min-width: 1000px;
 			z-index:-10;
 			zoom: 1;
-			background-image: url(../../../assets/images/school/dgut-login.jpg);
+			background-image: url(${pageContext.request.contextPath}/assets/images/school/dgut-login.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			-webkit-background-size: cover;
@@ -25,18 +25,18 @@
 <%@ include file="/WEB-INF/views/portal-common/portal-meta.jsp"%>
 </head>
 <body>
-	<div class="demo">
+	<div class="bg">
 		<div class="container higher" id="container">
 			<!-- navigation -->
-			<div class="header">
-				<ol class="breadcrumb">
-					<li><i class="fa fa-home"></i>&nbsp;<a href="${pageContext.request.contextPath}/index.action">主页</a></li>
-					<li class="active">登录</li>
-				</ol>
-			</div>
+<%--			<div class="header">--%>
+<%--				<ol class="breadcrumb">--%>
+<%--					<li><i class="fa fa-home"></i>&nbsp;<a href="${pageContext.request.contextPath}/index.action">主页</a></li>--%>
+<%--					<li class="active">登录</li>--%>
+<%--				</ol>--%>
+<%--			</div>--%>
 
 			<%@ include file="/WEB-INF/views/portal-common/portal-tag.jsp"%>
-			<div class="signinpanel" style="position: relative;top:50px;left:400px;">
+			<div class="signinpanel" style="position: relative;top:200px;left:400px;">
 				<div class="col-md-3">
 					<form method="post" action="${pageContext.request.contextPath}/login/validate.action" id="loginForm">
 						<center><h4 class="nomargin">登&nbsp;录</h4></center>

@@ -30,12 +30,9 @@ import com.xzit.ar.common.util.Assert;
 import com.xzit.ar.common.util.CommonUtil;
 
 /**
- * @author Mr.Black <br>
- * @version V1.0 <br>
- *          <br>
- * @ClassName: BaseController <br>
- * @Description: TODO <br>
- * @date 2015年12月21日 上午11:08:45 <br>
+ * @author xukexiang
+ * @version V1.0
+ * @ClassName: BaseController
  */
 public abstract class BaseController {
 
@@ -164,7 +161,7 @@ public abstract class BaseController {
      * @Description: TODO 获取查询条件字符串
      */
     protected String getQueryStr() {
-        return this.getParameter("queryStr");
+        return this.getRequest().getParameter("queryStr");
     }
 
     /**
